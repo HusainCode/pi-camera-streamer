@@ -1,0 +1,3 @@
+/home/husaincode/pi-camera-streamer/build/CMakeFiles/pi-camera-streamer.dir
+/home/husaincode/pi-camera-streamer/build/CMakeFiles/edit_cache.dir
+/home/husaincode/pi-camera-streamer/build/CMakeFiles/rebuild_cache.dir
