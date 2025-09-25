@@ -31,23 +31,28 @@ pi-camera-streamer/
 ├── CMakeLists.txt
 ├── README.md
 ├── .gitignore
+├── include/
+│ ├── capture.hpp
+│ ├── encoder.hpp
+│ ├── sender.hpp
+│ ├── buffer.hpp
+│ └── config.hpp
 ├── src/
-│   ├── main.cpp
-│   ├── capture.cpp
-│   ├── capture.hpp
-│   ├── encoder.cpp
-│   ├── encoder.hpp
-│   ├── sender.cpp
-│   ├── sender.hpp
-│   ├── buffer.hpp
-│   └── config.hpp
+│ ├── main.cpp
+│ ├── capture.cpp
+│ ├── encoder.cpp
+│ ├── sender.cpp
+│ └── ...
 ├── receiver/
-│   ├── CMakeLists.txt
-│   ├── main.cpp
-│   ├── receiver.cpp
-│   ├── receiver.hpp
-│   └── writer.hpp
-└── build/
+│ ├── CMakeLists.txt
+│ ├── include/
+│ │ ├── receiver.hpp
+│ │ └── writer.hpp
+│ └── src/
+│ ├── main.cpp
+│ ├── receiver.cpp
+│ └── writer.cpp
+└── build/ ← (ignored by git)
 ```
 
 ---
