@@ -1,26 +1,54 @@
 # pi-camera-streamer
 
-**pi-camera-streamer** is a high-performance, multi-threaded C++ service that runs on a Raspberry Pi 5, captures live video from a connected camera, and streams it over the network to a receiver on another machine (e.g., a laptop). Designed for real-time use cases, this system emphasizes low-latency, reliable delivery using POSIX threads and Linux system APIs.
+**pi-camera-streamer** is a high-performance, multi-threaded C++ service that runs on a Raspberry Pi 5. It captures live video from a connected camera and streams it over the network to a receiver on another machine (e.g., a laptop). Designed for real-time use cases, the system emphasizes low-latency, reliable delivery using POSIX threads and Linux system APIs.
 
 ---
 
 ## 🚀 Features
 
-### On Raspberry Pi (Sender)
+### 📦 On Raspberry Pi (Sender)
 - 📸 **Camera capture** via V4L2 or `libcamera`
 - ⚙️ **Real-time encoding** to MJPEG or H.264
 - 🧵 **Multi-threaded pipeline** using POSIX threads
-- 🚀 **Buffered frame queue** for decoupling capture, encode, and send
-- 🌐 **Network transport** over TCP (UDP optional)
-- 💾 Optional local archiving (to disk or RAM buffer)
-- 🧠 Configurable frame size, rate, resolution, and bitrate
+- 🚀 **Buffered frame queue** to decouple capture, encode, and send stages
+- 🌐 **Network transport** over TCP (UDP support optional)
+- 💾 Optional local archiving to disk or RAM
+- 🧠 Configurable resolution, frame rate, and bitrate
 
-### On Laptop (Receiver)
-- 🔌 **Socket listener** for incoming video streams
+### 💻 On Laptop (Receiver)
+- 🔌 **Socket listener** for incoming streams
 - 📥 **Stream decoder** using FFmpeg
 - 💾 **File writer** to archive received video (e.g., `.mp4`)
-- 👀 **Real-time viewer** via OpenCV (optional)
-- 📊 Logging and basic health stats
+- 👀 **Real-time display** with OpenCV (optional)
+- 📊 Basic logging and health stats (future)
+
+---
+
+## 🗂 Project Structure
+
+```
+pi-camera-streamer/
+├── CMakeLists.txt
+├── README.md
+├── .gitignore
+├── src/
+│   ├── main.cpp
+│   ├── capture.cpp
+│   ├── capture.hpp
+│   ├── encoder.cpp
+│   ├── encoder.hpp
+│   ├── sender.cpp
+│   ├── sender.hpp
+│   ├── buffer.hpp
+│   └── config.hpp
+├── receiver/
+│   ├── CMakeLists.txt
+│   ├── main.cpp
+│   ├── receiver.cpp
+│   ├── receiver.hpp
+│   └── writer.hpp
+└── build/
+```
 
 ---
 
@@ -40,7 +68,7 @@
 
 ---
 
- 
+## 🚀 Quick Start
 
 ### On Pi (Sender)
 
@@ -51,3 +79,25 @@ mkdir build && cd build
 cmake ..
 make
 ./pi-camera-streamer --dest-ip <laptop-ip> --port 5000 --device /dev/video0
+```
+
+### On Laptop (Receiver)
+
+```bash
+git clone <your-private-repo>
+cd pi-camera-streamer/receiver
+mkdir build && cd build
+cmake ..
+make
+./video-receiver --listen-port 5000 --output out.mp4
+```
+
+---
+
+## 🛠 Roadmap
+
+- [ ] UDP transport with optional FEC
+- [ ] TLS/SSL secure transport
+- [ ] Live OpenCV display mode
+- [ ] REST or gRPC API control interface
+- [ ] System health monitoring
