@@ -6,6 +6,9 @@
 A separate repository will be created for the **receiver** application.  
 
 ---
+## Project Board
+[View Jira Board](https://your-domain.atlassian.net/jira/software/c/projects/PCS/boards/1)
+---
 
 ## 🚀 Features (Sender – Raspberry Pi)
 
