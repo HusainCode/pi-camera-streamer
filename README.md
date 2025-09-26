@@ -6,8 +6,12 @@
 A separate repository will be created for the **receiver** application.  
 
 ---
-## Project Board
-[View Jira Board](https://your-domain.atlassian.net/jira/software/c/projects/PCS/boards/1)
+## 📌 Project Board  
+
+[![Jira](https://img.shields.io/badge/Jira-Board-0052CC?logo=jira)](https://your-domain.atlassian.net/jira/software/c/projects/PCS/boards/1)
+[![GitHub Issues](https://img.shields.io/github/issues/your-org/pi-camera-streamer)](https://github.com/your-org/pi-camera-streamer/issues)
+[![GitHub PRs](https://img.shields.io/github/issues-pr/your-org/pi-camera-streamer)](https://github.com/your-org/pi-camera-streamer/pulls)
+
 ---
 
 ## 🚀 Features (Sender – Raspberry Pi)
