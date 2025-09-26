@@ -23,10 +23,22 @@ public:
         condEmpty_.notify_one();
     }
 
-private:
-    size_t maxSize_;
-    std::queue<type> queue_;
-    mutable std::mutex mutex_;
-    std::condition_variable condFull_;
-    std::condition_variable condEmpty_;
-};
+    type pop()
+    {
+        std::unique_lock<std::mutex> lock(mutex_);
+        condEmpty_.wait(lock, [this]()
+                        { return !queue_.empty(); });
+        type iteam = queue_.front();
+        queue_.pop();
+        condFull_.notify_one();
+        return iteam;
+    }
+}
+
+private : size_t maxSize_;
+std::queue<type> queue_;
+mutable std::mutex mutex_;
+std::condition_variable condFull_;
+std::condition_variable condEmpty_;
+}
+;
