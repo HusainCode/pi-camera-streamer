@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/husaincode/pi-camera-streamer/include
 
-CXX_FLAGS =  -pthread -std=gnu++23
+CXX_FLAGS =  -pthread -g -std=gnu++23
 

@@ -1,1 +1,1 @@
-/usr/bin/c++  -pthread "CMakeFiles/pi-camera-streamer.dir/src/main.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/capture.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/encoder.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.o" -o pi-camera-streamer 
+/usr/bin/c++  -pthread -g "CMakeFiles/pi-camera-streamer.dir/src/main.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/capture.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/encoder.cpp.o" "CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.o" -o pi-camera-streamer 
