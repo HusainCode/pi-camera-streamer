@@ -7,38 +7,44 @@
 #include <thread>
 #include <vector>
 
-template <typename type>
+template <typename T>
 class Buffer
 {
 public:
     explicit Buffer(size_t maxSize) : maxSize_(maxSize) {}
 
-    // Add iteam to the buffer blocks if full
-    void push(const type &item)
+    // Blocking push — waits if the queue is full
+    void push(const T &item)
     {
         std::unique_lock<std::mutex> lock(mutex_);
-        condFull_.wait(lock, [this]()
-                       { return queue_.size() < maxSize_; };)
-            queue_.push(item);
+        condFull_.wait(lock, [this]
+                       { return queue_.size() < maxSize_; });
+        queue_.push(item);
         condEmpty_.notify_one();
     }
 
-    type pop()
+    // Blocking pop — waits if the queue is empty
+    T pop()
     {
         std::unique_lock<std::mutex> lock(mutex_);
-        condEmpty_.wait(lock, [this]()
+        condEmpty_.wait(lock, [this]
                         { return !queue_.empty(); });
-        type iteam = queue_.front();
+        T item = queue_.front();
         queue_.pop();
         condFull_.notify_one();
-        return iteam;
+        return item;
     }
-}
 
-private : size_t maxSize_;
-std::queue<type> queue_;
-mutable std::mutex mutex_;
-std::condition_variable condFull_;
-std::condition_variable condEmpty_;
-}
-;
+    size_t size() const
+    {
+        std::lock_guard<std::mutex> lock(mutex_);
+        return queue_.size();
+    }
+
+private:
+    size_t maxSize_;
+    std::queue<T> queue_;
+    mutable std::mutex mutex_;
+    std::condition_variable condFull_;
+    std::condition_variable condEmpty_;
+};
