@@ -1,45 +1,19 @@
 #pragma once
 
-#include <queue>              // FIFO
-#include <mutex>              // locked shared data safely
-#include <condition_variable> // lets threads wait and notify and each other
-#include <optional>           // allows returning maybe a value or nothing
-#include <thread>
-#include <vector>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
+#include <optional>
 
 template <typename T>
 class Buffer
 {
 public:
-    explicit Buffer(size_t maxSize) : maxSize_(maxSize) {}
+    explicit Buffer(size_t maxSize);
 
-    // Blocking push — waits if the queue is full
-    void push(const T &item)
-    {
-        std::unique_lock<std::mutex> lock(mutex_);
-        condFull_.wait(lock, [this]
-                       { return queue_.size() < maxSize_; });
-        queue_.push(item);
-        condEmpty_.notify_one();
-    }
-
-    // Blocking pop — waits if the queue is empty
-    T pop()
-    {
-        std::unique_lock<std::mutex> lock(mutex_);
-        condEmpty_.wait(lock, [this]
-                        { return !queue_.empty(); });
-        T item = queue_.front();
-        queue_.pop();
-        condFull_.notify_one();
-        return item;
-    }
-
-    size_t size() const
-    {
-        std::lock_guard<std::mutex> lock(mutex_);
-        return queue_.size();
-    }
+    void push(const T &item);
+    std::optional<T> pop();
+    size_t size() const;
 
 private:
     size_t maxSize_;
