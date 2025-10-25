@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/husaincode/pi-camera-streamer/src/buffer.cpp" "CMakeFiles/pi-camera-streamer.dir/src/buffer.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/buffer.cpp.o.d"
   "/home/husaincode/pi-camera-streamer/src/capture.cpp" "CMakeFiles/pi-camera-streamer.dir/src/capture.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/capture.cpp.o.d"
   "/home/husaincode/pi-camera-streamer/src/encoder.cpp" "CMakeFiles/pi-camera-streamer.dir/src/encoder.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/encoder.cpp.o.d"
+  "/home/husaincode/pi-camera-streamer/src/frame.cpp" "CMakeFiles/pi-camera-streamer.dir/src/frame.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/frame.cpp.o.d"
+  "/home/husaincode/pi-camera-streamer/src/logger.cpp" "CMakeFiles/pi-camera-streamer.dir/src/logger.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/logger.cpp.o.d"
   "/home/husaincode/pi-camera-streamer/src/main.cpp" "CMakeFiles/pi-camera-streamer.dir/src/main.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/main.cpp.o.d"
   "/home/husaincode/pi-camera-streamer/src/sender.cpp" "CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.o" "gcc" "CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.o.d"
   )

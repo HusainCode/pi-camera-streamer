@@ -1,0 +1,5 @@
+if(EXISTS "/home/husaincode/pi-camera-streamer/build/pi-camera-tests[1]_tests.cmake")
+  include("/home/husaincode/pi-camera-streamer/build/pi-camera-tests[1]_tests.cmake")
+else()
+  add_test(pi-camera-tests_NOT_BUILT pi-camera-tests_NOT_BUILT)
+endif()
