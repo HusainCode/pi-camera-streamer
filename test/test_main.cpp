@@ -1,8 +1,8 @@
 #include <gtest/gtest.h>
 
-// Entery point for GoogleTest
+// Entry point for GoogleTest
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TEST();
+    return RUN_ALL_TESTS();
 }

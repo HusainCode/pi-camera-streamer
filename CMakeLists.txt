@@ -56,8 +56,17 @@ FetchContent_MakeAvailable(googletest)
 # Collect all test files under test/
 file(GLOB TEST_SOURCES test/*.cpp)
 
+# Add source files needed by tests (excluding main.cpp)
+set(TEST_LIB_SOURCES
+    src/frame.cpp
+    src/buffer.cpp
+    src/logger.cpp
+    # Add other sources as needed for tests
+)
+
 add_executable(pi-camera-tests
     ${TEST_SOURCES}
+    ${TEST_LIB_SOURCES}
 )
 
 target_link_libraries(pi-camera-tests
