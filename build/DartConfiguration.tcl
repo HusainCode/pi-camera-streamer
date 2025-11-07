@@ -11,7 +11,7 @@ BuildDirectory: /home/husaincode/pi-camera-streamer/build
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: husaincode
+Site: LAPTOP-L65DL0V4
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -64,7 +64,7 @@ UpdateType: git
 
 # Compiler info
 Compiler: /usr/bin/c++
-CompilerVersion: 14.2.0
+CompilerVersion: 13.3.0
 
 # Dynamic analysis (MemCheck)
 PurifyCommand: 
@@ -94,9 +94,6 @@ TimeOut: 1500
 # During parallel testing CTest will not start a new test if doing
 # so would cause the system load to exceed this value.
 TestLoad: 
-
-TLSVerify: 
-TLSVersion: 
 
 UseLaunchers: 
 CurlOptions: 
