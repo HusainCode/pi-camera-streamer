@@ -61,6 +61,7 @@ set(TEST_LIB_SOURCES
     src/frame.cpp
     src/buffer.cpp
     src/logger.cpp
+    src/sender.cpp
     # Add other sources as needed for tests
 )
 

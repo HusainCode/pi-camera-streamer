@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/pi-camera-tests.dir/src/frame.cpp.o.d"
   "CMakeFiles/pi-camera-tests.dir/src/logger.cpp.o"
   "CMakeFiles/pi-camera-tests.dir/src/logger.cpp.o.d"
+  "CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o"
+  "CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o.d"
   "CMakeFiles/pi-camera-tests.dir/test/benchmark_frame.cpp.o"
   "CMakeFiles/pi-camera-tests.dir/test/benchmark_frame.cpp.o.d"
   "CMakeFiles/pi-camera-tests.dir/test/test_buffer.cpp.o"

@@ -223,6 +223,20 @@ CMakeFiles/pi-camera-tests.dir/src/logger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pi-camera-tests.dir/src/logger.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/husaincode/pi-camera-streamer/src/logger.cpp -o CMakeFiles/pi-camera-tests.dir/src/logger.cpp.s
 
+CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o: CMakeFiles/pi-camera-tests.dir/flags.make
+CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o: /home/husaincode/pi-camera-streamer/src/sender.cpp
+CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o: CMakeFiles/pi-camera-tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/husaincode/pi-camera-streamer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o -MF CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o.d -o CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o -c /home/husaincode/pi-camera-streamer/src/sender.cpp
+
+CMakeFiles/pi-camera-tests.dir/src/sender.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/pi-camera-tests.dir/src/sender.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/husaincode/pi-camera-streamer/src/sender.cpp > CMakeFiles/pi-camera-tests.dir/src/sender.cpp.i
+
+CMakeFiles/pi-camera-tests.dir/src/sender.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/pi-camera-tests.dir/src/sender.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/husaincode/pi-camera-streamer/src/sender.cpp -o CMakeFiles/pi-camera-tests.dir/src/sender.cpp.s
+
 # Object files for target pi-camera-tests
 pi__camera__tests_OBJECTS = \
 "CMakeFiles/pi-camera-tests.dir/test/benchmark_frame.cpp.o" \
@@ -235,7 +249,8 @@ pi__camera__tests_OBJECTS = \
 "CMakeFiles/pi-camera-tests.dir/test/test_sender.cpp.o" \
 "CMakeFiles/pi-camera-tests.dir/src/frame.cpp.o" \
 "CMakeFiles/pi-camera-tests.dir/src/buffer.cpp.o" \
-"CMakeFiles/pi-camera-tests.dir/src/logger.cpp.o"
+"CMakeFiles/pi-camera-tests.dir/src/logger.cpp.o" \
+"CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o"
 
 # External object files for target pi-camera-tests
 pi__camera__tests_EXTERNAL_OBJECTS =
@@ -251,13 +266,14 @@ pi-camera-tests: CMakeFiles/pi-camera-tests.dir/test/test_sender.cpp.o
 pi-camera-tests: CMakeFiles/pi-camera-tests.dir/src/frame.cpp.o
 pi-camera-tests: CMakeFiles/pi-camera-tests.dir/src/buffer.cpp.o
 pi-camera-tests: CMakeFiles/pi-camera-tests.dir/src/logger.cpp.o
+pi-camera-tests: CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o
 pi-camera-tests: CMakeFiles/pi-camera-tests.dir/build.make
 pi-camera-tests: lib/libgtest_main.a
 pi-camera-tests: /usr/lib/x86_64-linux-gnu/libspdlog.so.1.12.0
 pi-camera-tests: lib/libgtest.a
 pi-camera-tests: /usr/lib/x86_64-linux-gnu/libfmt.so.9.1.0
 pi-camera-tests: CMakeFiles/pi-camera-tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/husaincode/pi-camera-streamer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable pi-camera-tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/husaincode/pi-camera-streamer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable pi-camera-tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pi-camera-tests.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=pi-camera-tests -D TEST_EXECUTABLE=/home/husaincode/pi-camera-streamer/build/pi-camera-tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/husaincode/pi-camera-streamer/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=pi-camera-tests_TESTS -D CTEST_FILE=/home/husaincode/pi-camera-streamer/build/pi-camera-tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.28/Modules/GoogleTestAddTests.cmake
 

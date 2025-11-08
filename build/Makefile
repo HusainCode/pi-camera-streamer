@@ -772,6 +772,7 @@ src/sender.o: src/sender.cpp.o
 # target to build an object file
 src/sender.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-streamer.dir/build.make CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-tests.dir/build.make CMakeFiles/pi-camera-tests.dir/src/sender.cpp.o
 .PHONY : src/sender.cpp.o
 
 src/sender.i: src/sender.cpp.i
@@ -780,6 +781,7 @@ src/sender.i: src/sender.cpp.i
 # target to preprocess a source file
 src/sender.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-streamer.dir/build.make CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-tests.dir/build.make CMakeFiles/pi-camera-tests.dir/src/sender.cpp.i
 .PHONY : src/sender.cpp.i
 
 src/sender.s: src/sender.cpp.s
@@ -788,6 +790,7 @@ src/sender.s: src/sender.cpp.s
 # target to generate assembly for a file
 src/sender.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-streamer.dir/build.make CMakeFiles/pi-camera-streamer.dir/src/sender.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pi-camera-tests.dir/build.make CMakeFiles/pi-camera-tests.dir/src/sender.cpp.s
 .PHONY : src/sender.cpp.s
 
 test/benchmark_frame.o: test/benchmark_frame.cpp.o
